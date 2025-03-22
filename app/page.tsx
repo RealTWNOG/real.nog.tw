@@ -3,18 +3,8 @@
 import Link from "next/link";
 import { useTranslation } from "./hooks/useTranslation";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { EventCard, type Event } from "@/components/EventCard";
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {

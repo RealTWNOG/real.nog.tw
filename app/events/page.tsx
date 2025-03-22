@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useTranslation } from "../hooks/useTranslation";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Separator } from "@/components/ui/separator";
 import { EventCard, type Event } from "@/components/EventCard";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
