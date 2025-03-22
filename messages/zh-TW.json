@@ -1,0 +1,51 @@
+{
+  "Index": {
+    "title": "RealTWNOG",
+    "subtitle": "臺灣網路營運商群組",
+    "description": "臺灣網路營運商社群，致力於提供網路互連合作與技術交流的平台。",
+    "about": "關於我們",
+    "mission": "我們的使命",
+    "mission_text": "RealTWNOG 旨在促進臺灣網路營運商之間的技術交流與合作，建立一個開放、共享的專業社群，加強網路基礎設施的穩定性與安全性。",
+    "whatWeDo": "我們做什麼",
+    "whatWeDo_item1": "技術分享會與工作坊",
+    "whatWeDo_item2": "業界交流與合作機會",
+    "whatWeDo_item3": "網路基礎設施的最佳實踐研討",
+    "whatWeDo_item4": "最新網路技術與趨勢探討",
+    "upcomingEvents": "近期活動",
+    "viewAllEvents": "查看所有活動"
+  },
+  "Common": {
+    "loading": "載入中...",
+    "error": "發生錯誤",
+    "retry": "重試",
+    "back": "返回",
+    "submit": "提交",
+    "cancel": "取消",
+    "learnMore": "了解更多",
+    "readMore": "閱讀更多"
+  },
+  "Menu": {
+    "home": "首頁",
+    "about": "關於我們",
+    "members": "成員列表",
+    "events": "活動",
+    "contact": "聯絡我們"
+  },
+  "Events": {
+    "title": "活動",
+    "subtitle": "加入我們的技術交流與分享",
+    "upcomingEvents": "近期活動",
+    "pastEvents": "過往活動",
+    "eventDate": "日期",
+    "eventLocation": "地點",
+    "eventType": "活動類型",
+    "noUpcomingEvents": "目前沒有近期活動",
+    "registerNow": "立即報名",
+    "moreDetails": "更多詳情",
+    "workshop": "工作坊",
+    "conference": "研討會",
+    "meetup": "聚會",
+    "online": "線上",
+    "hybrid": "混合"
+  }
+}

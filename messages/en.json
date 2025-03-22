@@ -1,0 +1,51 @@
+{
+  "Index": {
+    "title": "RealTWNOG",
+    "subtitle": "Taiwan Network Operators Group",
+    "description": "Taiwan Network Operators Group community, dedicated to providing a platform for network interconnection cooperation and technical exchange.",
+    "about": "About Us",
+    "mission": "Our Mission",
+    "mission_text": "RealTWNOG aims to promote technical exchanges and cooperation among Taiwan network operators, establishing an open and shared professional community to enhance the stability and security of network infrastructure.",
+    "whatWeDo": "What We Do",
+    "whatWeDo_item1": "Technical sharing sessions and workshops",
+    "whatWeDo_item2": "Industry networking and collaboration opportunities",
+    "whatWeDo_item3": "Best practices discussions for network infrastructure",
+    "whatWeDo_item4": "Exploration of latest network technologies and trends",
+    "upcomingEvents": "Upcoming Events",
+    "viewAllEvents": "View All Events"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "back": "Back",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "learnMore": "Learn More",
+    "readMore": "Read More"
+  },
+  "Menu": {
+    "home": "Home",
+    "about": "About",
+    "members": "Members",
+    "events": "Events",
+    "contact": "Contact"
+  },
+  "Events": {
+    "title": "Events",
+    "subtitle": "Join our technical exchanges and sharing sessions",
+    "upcomingEvents": "Upcoming Events",
+    "pastEvents": "Past Events",
+    "eventDate": "Date",
+    "eventLocation": "Location",
+    "eventType": "Event Type",
+    "noUpcomingEvents": "No upcoming events at the moment",
+    "registerNow": "Register Now",
+    "moreDetails": "More Details",
+    "workshop": "Workshop",
+    "conference": "Conference",
+    "meetup": "Meetup",
+    "online": "Online",
+    "hybrid": "Hybrid"
+  }
+}
