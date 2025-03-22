@@ -115,10 +115,10 @@ export default function EventsPage() {
                     />
                   </div>
 
-                  <TabsList className="relative z-10 grid w-auto min-w-[300px] grid-cols-2 overflow-hidden rounded-xl border border-cyan-200/80 bg-white/90 p-1 shadow-lg shadow-cyan-500/10 backdrop-blur-md dark:border-cyan-800/30 dark:bg-gray-900/80 dark:shadow-cyan-900/20">
+                  <TabsList className="relative z-10 grid h-auto w-auto max-w-[90vw] min-w-[280px] grid-cols-2 overflow-hidden rounded-xl border border-cyan-200/80 bg-white/90 p-1 shadow-lg shadow-cyan-500/10 backdrop-blur-md dark:border-cyan-800/30 dark:bg-gray-900/80 dark:shadow-cyan-900/20">
                     <TabsTrigger
                       value="upcoming"
-                      className="relative flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium tracking-wide transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white dark:data-[state=active]:from-cyan-600 dark:data-[state=active]:to-cyan-500"
+                      className="relative flex h-10 items-center justify-center rounded-lg px-3 text-sm font-medium tracking-wide transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white sm:px-6 dark:data-[state=active]:from-cyan-600 dark:data-[state=active]:to-cyan-500"
                     >
                       <motion.div
                         layoutId="tab-indicator"
@@ -139,7 +139,7 @@ export default function EventsPage() {
                     </TabsTrigger>
                     <TabsTrigger
                       value="past"
-                      className="relative flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium tracking-wide transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white dark:data-[state=active]:from-cyan-600 dark:data-[state=active]:to-cyan-500"
+                      className="relative flex h-10 items-center justify-center rounded-lg px-3 text-sm font-medium tracking-wide transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white sm:px-6 dark:data-[state=active]:from-cyan-600 dark:data-[state=active]:to-cyan-500"
                     >
                       <motion.span className="relative z-20">
                         {t("pastEvents")}
