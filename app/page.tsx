@@ -12,16 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
-// 定義事件類型
-interface Event {
-  id: number;
-  title: string;
-  date: string;
-  location: string;
-  type: string;
-  description: string;
-}
+import { EventCard, type Event } from "@/components/EventCard";
 
 export default function Home() {
   const { t } = useTranslation("Index");
@@ -148,28 +139,7 @@ export default function Home() {
           </div>
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
             {upcomingEvents.map((event) => (
-              <Card key={event.id} className="flex h-full flex-col">
-                <CardHeader>
-                  <CardTitle>{event.title}</CardTitle>
-                  <CardDescription>
-                    {new Date(event.date).toLocaleDateString("zh-TW")} ·{" "}
-                    {event.location}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p>{event.description}</p>
-                </CardContent>
-                <CardFooter className="flex justify-between border-t pt-4">
-                  <p className="text-muted-foreground text-sm">
-                    {t(`Events.${event.type}`)}
-                  </p>
-                  <Button asChild variant="ghost" size="sm">
-                    <Link href={`/events#event-${event.id}`}>
-                      {t("Common.learnMore")}
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+              <EventCard key={event.id} event={event} variant="compact" />
             ))}
           </div>
           <div className="mt-8 flex justify-center">

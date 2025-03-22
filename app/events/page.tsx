@@ -3,26 +3,9 @@
 import Link from "next/link";
 import { useTranslation } from "../hooks/useTranslation";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-
-// 定義事件類型
-interface Event {
-  id: number;
-  title: string;
-  date: string;
-  location: string;
-  type: string;
-  description: string;
-}
+import { EventCard, type Event } from "@/components/EventCard";
 
 export default function EventsPage() {
   const { t } = useTranslation("Events");
@@ -99,47 +82,6 @@ export default function EventsPage() {
       description: "探討 DNS 安全威脅與防護策略，包含 DNSSEC 部署實務",
     },
   ];
-
-  function EventCard({
-    event,
-    isPast = false,
-  }: {
-    event: Event;
-    isPast?: boolean;
-  }) {
-    return (
-      <Card className="flex h-full flex-col" id={`event-${event.id}`}>
-        <CardHeader>
-          <div className="flex items-start justify-between">
-            <div>
-              <CardTitle>{event.title}</CardTitle>
-              <CardDescription>
-                {new Date(event.date).toLocaleDateString("zh-TW")} ·{" "}
-                {event.location}
-              </CardDescription>
-            </div>
-            <div className="focus:ring-ring bg-primary text-primary-foreground hover:bg-primary/80 inline-flex items-center rounded-full border border-transparent px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none">
-              {t(event.type)}
-            </div>
-          </div>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <p>{event.description}</p>
-        </CardContent>
-        <CardFooter className="border-t pt-4">
-          <Button
-            asChild
-            variant={isPast ? "outline" : "default"}
-            className="w-full"
-          >
-            <Link href={`/events#event-${event.id}`}>
-              {isPast ? t("moreDetails") : t("registerNow")}
-            </Link>
-          </Button>
-        </CardFooter>
-      </Card>
-    );
-  }
 
   return (
     <div className="flex flex-col items-center">
