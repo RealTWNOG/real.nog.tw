@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { EventCard, type Event } from "@/components/EventCard";
+import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
+import { PageHero } from "@/app/components/PageHero";
 
 export default function EventsPage() {
   const { t } = useTranslation("Events");
@@ -84,62 +87,160 @@ export default function EventsPage() {
   ];
 
   return (
-    <div className="flex flex-col items-center">
-      {/* 活動頁面標題 */}
-      <section className="w-full bg-gradient-to-r from-blue-100 to-violet-100 py-12 md:py-16 lg:py-20 dark:from-blue-950/40 dark:to-violet-950/40">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-              {t("title")}
-            </h1>
-            <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl dark:text-gray-300">
-              {t("subtitle")}
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="w-full">
+      {/* 使用可重用的 PageHero 組件 */}
+      <PageHero
+        title={t("title")}
+        description={t("description")}
+        tag="events"
+      />
 
-      {/* 活動列表 */}
-      <section className="w-full py-12 md:py-16">
+      {/* 活動列表區塊 */}
+      <section className="bg-gradient-to-b from-white to-gray-50 py-16 dark:from-gray-900 dark:to-gray-950">
         <div className="container px-4 md:px-6">
-          <Tabs defaultValue="upcoming" className="w-full">
-            <TabsList className="mx-auto grid w-full max-w-md grid-cols-2">
-              <TabsTrigger value="upcoming">{t("upcomingEvents")}</TabsTrigger>
-              <TabsTrigger value="past">{t("pastEvents")}</TabsTrigger>
-            </TabsList>
-            <div className="mt-8">
-              <TabsContent value="upcoming" className="space-y-8">
-                {upcomingEvents.length > 0 ? (
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {upcomingEvents.map((event) => (
-                      <EventCard key={event.id} event={event} />
+          <div className="mx-auto max-w-5xl">
+            {/* 標籤切換控制器 */}
+            <div className="mb-12 flex flex-col items-center justify-center">
+              <Tabs defaultValue="upcoming" className="w-full">
+                <div className="relative mx-auto mb-8 flex justify-center">
+                  {/* 背景光暈效果 */}
+                  <div className="absolute inset-0 flex items-center">
+                    <motion.div
+                      className="h-12 w-full rounded-full bg-gradient-to-r from-cyan-400/30 via-fuchsia-400/30 to-amber-400/30 blur-xl"
+                      animate={{
+                        opacity: [0.5, 0.8, 0.5],
+                        scale: [0.97, 1.01, 0.97],
+                      }}
+                      transition={{ duration: 5, repeat: Infinity }}
+                    />
+                  </div>
+
+                  <TabsList className="relative z-10 grid w-auto min-w-[300px] grid-cols-2 overflow-hidden rounded-xl border border-cyan-200/80 bg-white/90 p-1 shadow-lg shadow-cyan-500/10 backdrop-blur-md dark:border-cyan-800/30 dark:bg-gray-900/80 dark:shadow-cyan-900/20">
+                    <TabsTrigger
+                      value="upcoming"
+                      className="relative flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium tracking-wide transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white dark:data-[state=active]:from-cyan-600 dark:data-[state=active]:to-cyan-500"
+                    >
+                      <motion.div
+                        layoutId="tab-indicator"
+                        className="absolute inset-0 z-10 rounded-lg"
+                        transition={{
+                          type: "spring",
+                          bounce: 0.2,
+                          duration: 0.6,
+                        }}
+                        style={{
+                          opacity: 0,
+                          boxShadow: "0 0 15px 2px rgba(14, 165, 233, 0.3)",
+                        }}
+                      />
+                      <span className="relative z-20">
+                        {t("upcomingEvents")}
+                      </span>
+                    </TabsTrigger>
+                    <TabsTrigger
+                      value="past"
+                      className="relative flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium tracking-wide transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white dark:data-[state=active]:from-cyan-600 dark:data-[state=active]:to-cyan-500"
+                    >
+                      <motion.span className="relative z-20">
+                        {t("pastEvents")}
+                      </motion.span>
+                    </TabsTrigger>
+                  </TabsList>
+                </div>
+
+                <TabsContent value="upcoming" className="w-full">
+                  <motion.h2
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="mb-8 text-center text-2xl font-bold text-gray-900 dark:text-white"
+                  >
+                    {t("upcomingEvents")}
+                  </motion.h2>
+                  {upcomingEvents.length > 0 ? (
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                      {upcomingEvents.map((event, index) => (
+                        <motion.div
+                          key={event.id}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                          className="h-full"
+                        >
+                          <EventCard event={event} variant="homepage" />
+                        </motion.div>
+                      ))}
+                    </div>
+                  ) : (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5 }}
+                      className="rounded-lg border-2 border-black/80 bg-white p-8 text-center shadow-md dark:border-white/20 dark:bg-gray-900"
+                    >
+                      <div className="mb-4 inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                        通知！
+                      </div>
+                      <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
+                        {t("noUpcomingEvents")}
+                      </h3>
+                      <p className="mb-6 text-gray-600 dark:text-gray-400">
+                        {t("joinDiscord")}
+                      </p>
+                      <Button
+                        asChild
+                        className="border-2 border-black/80 bg-cyan-500 font-medium text-white transition-all hover:bg-cyan-600 dark:border-white/20"
+                      >
+                        <Link
+                          href="https://discord.gg/realtw"
+                          target="_blank"
+                          className="flex items-center gap-2"
+                        >
+                          加入 Discord
+                          <motion.div
+                            animate={{ x: [0, 3, 0] }}
+                            transition={{
+                              repeat: Infinity,
+                              repeatDelay: 1.5,
+                              duration: 0.8,
+                            }}
+                          >
+                            <ArrowUpRight className="h-4 w-4 text-white" />
+                          </motion.div>
+                        </Link>
+                      </Button>
+                    </motion.div>
+                  )}
+                </TabsContent>
+
+                <TabsContent value="past" className="w-full">
+                  <motion.h2
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="mb-8 text-center text-2xl font-bold text-gray-900 dark:text-white"
+                  >
+                    {t("pastEvents")}
+                  </motion.h2>
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {pastEvents.map((event, index) => (
+                      <motion.div
+                        key={event.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                        className="h-full"
+                      >
+                        <EventCard event={event} isPast variant="homepage" />
+                      </motion.div>
                     ))}
                   </div>
-                ) : (
-                  <div className="flex min-h-[300px] flex-col items-center justify-center text-center">
-                    <p className="text-lg font-medium">
-                      {t("noUpcomingEvents")}
-                    </p>
-                    <p className="mt-2 text-gray-500">
-                      請關注我們的 Discord 以獲取最新活動資訊。
-                    </p>
-                    <Button asChild variant="outline" className="mt-6">
-                      <Link href="https://discord.gg/realtw" target="_blank">
-                        加入 Discord
-                      </Link>
-                    </Button>
-                  </div>
-                )}
-              </TabsContent>
-              <TabsContent value="past" className="space-y-8">
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {pastEvents.map((event) => (
-                    <EventCard key={event.id} event={event} isPast={true} />
-                  ))}
-                </div>
-              </TabsContent>
+                </TabsContent>
+              </Tabs>
             </div>
-          </Tabs>
+          </div>
         </div>
       </section>
     </div>
