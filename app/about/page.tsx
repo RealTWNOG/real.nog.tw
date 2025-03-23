@@ -13,7 +13,6 @@ export default function AboutPage() {
     <div className="w-full">
       {/* 頁面標題區塊 */}
       <PageHero title={t("title")} description={t("description")} tag="about" />
-
       {/* 歷史與使命 */}
       <section className="bg-white py-20 dark:bg-gray-900">
         <div className="container px-4 md:px-6">
@@ -111,7 +110,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* 核心價值 */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-20 dark:from-gray-950 dark:to-gray-900">
         <div className="container px-4 md:px-6">
@@ -140,9 +138,8 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <Card className="overflow-hidden border-2 border-black/10 transition-all duration-300 hover:shadow-lg dark:border-white/10 dark:hover:shadow-cyan-900/10">
+                <Card className="overflow-hidden border-2 border-black/10 transition-all duration-300 dark:border-white/10">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-cyan-300/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                     <div className="flex h-20 items-center justify-center">
                       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900/30">
                         <Share2 className="h-7 w-7 text-cyan-600 dark:text-cyan-300" />
@@ -170,9 +167,9 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <Card className="overflow-hidden border-2 border-black/10 transition-all duration-300 hover:shadow-lg dark:border-white/10 dark:hover:shadow-cyan-900/10">
+                <Card className="overflow-hidden border-2 border-black/10 transition-all duration-300 dark:border-white/10">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-400/20 to-fuchsia-300/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-400/20 to-fuchsia-300/20 opacity-0 transition-opacity duration-300"></div>
                     <div className="flex h-20 items-center justify-center">
                       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-fuchsia-100 dark:bg-fuchsia-900/30">
                         <Code className="h-7 w-7 text-fuchsia-600 dark:text-fuchsia-300" />
@@ -200,9 +197,9 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <Card className="overflow-hidden border-2 border-black/10 transition-all duration-300 hover:shadow-lg dark:border-white/10 dark:hover:shadow-cyan-900/10">
+                <Card className="overflow-hidden border-2 border-black/10 transition-all duration-300 dark:border-white/10">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-amber-300/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-amber-300/20 opacity-0 transition-opacity duration-300"></div>
                     <div className="flex h-20 items-center justify-center">
                       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30">
                         <Heart className="h-7 w-7 text-amber-600 dark:text-amber-300" />

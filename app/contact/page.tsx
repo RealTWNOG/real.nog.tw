@@ -54,12 +54,12 @@ export default function ContactPage() {
                 </h3>
 
                 <div className="space-y-4">
-                  <Card className="border-2 border-gray-200 transition-all hover:border-cyan-200 hover:shadow-md dark:border-gray-700 dark:hover:border-cyan-800">
-                    <CardContent className="p-4">
-                      <Link
-                        href="mailto:contact@realtw.org"
-                        className="flex items-center justify-between"
-                      >
+                  <Card className="border-2 border-gray-200 transition-all hover:border-cyan-200 hover:bg-cyan-50 dark:border-gray-700 dark:hover:border-cyan-800">
+                    <Link
+                      href="mailto:contact@realtw.org"
+                      className="block w-full"
+                    >
+                      <CardContent className="flex w-full items-center justify-between gap-2 p-4">
                         <div className="flex items-center gap-3">
                           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-300">
                             <AtSign className="h-5 w-5" />
@@ -74,8 +74,8 @@ export default function ContactPage() {
                           </div>
                         </div>
                         <ArrowUpRight className="h-5 w-5 text-gray-400" />
-                      </Link>
-                    </CardContent>
+                      </CardContent>
+                    </Link>
                   </Card>
                 </div>
               </div>

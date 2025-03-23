@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* 英雄區塊 */}
-      <section className="relative w-full overflow-hidden border-b border-gray-100 bg-white py-24 md:py-32 lg:py-40 dark:border-gray-800 dark:bg-gray-950">
+      <section className="relative w-full overflow-hidden bg-white py-24 md:py-32 lg:py-40 dark:border-gray-800 dark:bg-gray-950">
         <div className="relative z-10 container px-4 md:px-6">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
             {/* 左側文字內容 */}
@@ -92,10 +92,7 @@ export default function Home() {
                   size="lg"
                   className="border-gray-300 font-medium text-gray-700 transition-all hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800/60"
                 >
-                  <Link
-                    href="/contact"
-                    className="flex items-center gap-2"
-                  >
+                  <Link href="/contact" className="flex items-center gap-2">
                     {t("Common.contactUs")}
                     <motion.svg
                       width="18"

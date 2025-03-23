@@ -43,6 +43,7 @@
   "Events": {
     "title": "Events",
     "subtitle": "Join our technical exchanges and sharing sessions",
+    "description": "Explore various technical conferences, workshops, and networking events hosted by RealTWNOG, where you can learn and grow with network experts.",
     "upcomingEvents": "Upcoming Events",
     "pastEvents": "Past Events",
     "eventDate": "Date",

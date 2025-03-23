@@ -71,7 +71,7 @@ export function PageHero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="mx-auto max-w-4xl text-center"
+          className="mx-auto flex max-w-4xl flex-col items-center text-center"
         >
           {/* 標題盒子 */}
           <div className="mb-6 inline-block rounded-xl bg-white/10 px-6 py-2 backdrop-blur-md">
@@ -100,7 +100,7 @@ export function PageHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-6 text-lg text-white md:text-xl"
+            className="mt-6 max-w-lg text-base text-white md:text-xl"
           >
             {description}
           </motion.p>

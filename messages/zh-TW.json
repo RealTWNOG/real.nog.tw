@@ -43,6 +43,7 @@
   "Events": {
     "title": "活動",
     "subtitle": "加入我們的技術交流與分享",
+    "description": "探索 RealTWNOG 舉辦的各種技術研討會、工作坊與交流活動，與網路專家們一同學習與成長。",
     "upcomingEvents": "近期活動",
     "pastEvents": "過往活動",
     "eventDate": "日期",
