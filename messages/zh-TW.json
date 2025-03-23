@@ -23,7 +23,15 @@
     "cancel": "取消",
     "learnMore": "了解更多",
     "readMore": "閱讀更多",
-    "contactUs": "聯絡我們"
+    "contactUs": "聯絡我們",
+    "footer_description": "臺灣網路營運商社群，致力於提供網路互連合作與技術交流的平台。",
+    "footer_quick_links": "快速連結",
+    "footer_social": "社群連結",
+    "footer_contact": "聯絡資訊",
+    "footer_rights": "版權所有",
+    "about": "關於我們",
+    "members": "成員列表",
+    "contact": "聯絡我們"
   },
   "Menu": {
     "home": "首頁",

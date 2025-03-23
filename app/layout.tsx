@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "./LanguageProvider";
 import Navbar from "./components/Navbar";
+import { Footer } from "./components/Footer";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
@@ -46,7 +47,7 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
-            {/* 可以在這裡加入 Footer */}
+            <Footer />
           </div>
         </LanguageProvider>
       </body>
