@@ -14,7 +14,7 @@ export default function EventsPage() {
     {
       id: 1,
       title: "源來這才是真正的網路維運",
-      date: "2025-xx-xx",
+      date: "2025",
       location: "台北市",
       type: "conference",
       description:

@@ -73,33 +73,33 @@ export default function AboutPage() {
                   {t("mission_text")}
                 </p>
 
-                <div className="relative rounded-xl border-2 border-black/10 bg-gray-50 p-6 shadow-md dark:border-white/10 dark:bg-gray-800">
-                  <div className="absolute -top-3 -right-3 h-12 w-12 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 opacity-70 blur-xl"></div>
-                  <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
+                <div className="rounded-xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-md dark:from-white/10 dark:to-white/5 dark:shadow-lg">
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 opacity-50"></div>
+                  <h3 className="relative mb-4 text-xl font-semibold text-gray-900 dark:text-white">
                     {t("committed_to")}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="relative space-y-3">
                     <li className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-300">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-cyan-500 shadow-sm backdrop-blur-sm dark:bg-white/10">
                         <Share2 className="h-4 w-4" />
                       </div>
-                      <span className="text-gray-700 dark:text-gray-300">
+                      <span className="text-gray-700 dark:text-gray-200">
                         {t("commitment_1")}
                       </span>
                     </li>
                     <li className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-300">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-cyan-500 shadow-sm backdrop-blur-sm dark:bg-white/10">
                         <Code className="h-4 w-4" />
                       </div>
-                      <span className="text-gray-700 dark:text-gray-300">
+                      <span className="text-gray-700 dark:text-gray-200">
                         {t("commitment_2")}
                       </span>
                     </li>
                     <li className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-300">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-cyan-500 shadow-sm backdrop-blur-sm dark:bg-white/10">
                         <Users className="h-4 w-4" />
                       </div>
-                      <span className="text-gray-700 dark:text-gray-300">
+                      <span className="text-gray-700 dark:text-gray-200">
                         {t("commitment_3")}
                       </span>
                     </li>

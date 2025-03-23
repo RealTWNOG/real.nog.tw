@@ -12,7 +12,7 @@ export function Footer() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950"
+      className="z-10 w-full border-t border-gray-200 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/90 dark:border-gray-800 dark:bg-gray-950"
     >
       <div className="container px-4 py-12 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">

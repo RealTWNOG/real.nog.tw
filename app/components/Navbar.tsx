@@ -72,7 +72,7 @@ export default function Navbar() {
                 {pathname === item.href && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -bottom-[1px] h-[2px] w-full bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-amber-400"
+                    className="absolute -bottom-[1px] h-[2px] w-full rounded-full bg-cyan-600"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     style={{
                       originY: "0px",
@@ -185,16 +185,16 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "flex rounded-md p-2 text-sm font-medium transition-colors",
+                        "flex items-center rounded-md p-2 px-4 text-sm font-medium transition-colors",
                         pathname === item.href
-                          ? "bg-cyan-50 text-cyan-700 dark:bg-cyan-950/30 dark:text-cyan-300"
+                          ? "bg-cyan-100 text-cyan-700 dark:bg-cyan-950/30 dark:text-cyan-300"
                           : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-900/50 dark:hover:text-white"
                       )}
                     >
-                      {item.label}
                       {pathname === item.href && (
-                        <div className="ml-2 h-1 w-1 rounded-full bg-cyan-500 dark:bg-cyan-400" />
+                        <div className="mr-1 -ml-2 h-1 w-1 rounded-full bg-cyan-500 dark:bg-cyan-400" />
                       )}
+                      {item.label}
                     </Link>
                   </motion.div>
                 ))}

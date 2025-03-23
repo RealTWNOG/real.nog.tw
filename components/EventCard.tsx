@@ -72,9 +72,7 @@ export function EventCard({
           <CardTitle className="mt-2 text-lg font-bold">
             {event.title}
           </CardTitle>
-        </CardHeader>
-        <CardContent className="pb-3">
-          <div className="mb-3 flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
             <div className="flex items-center">
               <CalendarIcon className="mr-1 h-4 w-4" />
               <span>{event.date}</span>
@@ -84,6 +82,8 @@ export function EventCard({
               <span>{event.location}</span>
             </div>
           </div>
+        </CardHeader>
+        <CardContent className="pb-3">
           <p className="text-gray-600 dark:text-gray-300">
             {event.description}
           </p>
