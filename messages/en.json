@@ -22,14 +22,15 @@
     "submit": "Submit",
     "cancel": "Cancel",
     "learnMore": "Learn More",
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "contactUs": "Contact Us"
   },
   "Menu": {
     "home": "Home",
-    "about": "About",
-    "members": "Members",
     "events": "Events",
-    "contact": "Contact"
+    "about": "About",
+    "contact": "Contact",
+    "quickaction": "Register Now"
   },
   "Events": {
     "title": "Events",
@@ -40,14 +41,14 @@
     "eventLocation": "Location",
     "eventType": "Event Type",
     "noUpcomingEvents": "No upcoming events at the moment",
+    "noPastEvents": "No past events at the moment",
     "registerNow": "Register Now",
     "moreDetails": "More Details",
     "workshop": "Workshop",
     "conference": "Conference",
     "meetup": "Meetup",
     "online": "Online",
-    "hybrid": "Hybrid",
-    "joinDiscord": "Join our Discord community for the latest event updates"
+    "hybrid": "Hybrid"
   },
   "About": {
     "title": "About Us",
@@ -63,18 +64,13 @@
     "value2_text": "We value technical professionalism and are committed to providing high-quality technical content.",
     "value3_title": "Collaborative Support",
     "value3_text": "We encourage cooperation and mutual assistance among members to jointly solve challenges in network operations.",
-    "team": "Core Team",
-    "joinUs": "Join Us",
-    "history_2020": "RealTWNOG was officially established by a group of passionate network engineers with the goal of creating an open platform for technical exchange.",
-    "history_2021": "Hosted our first large-scale online seminar, attracting over 200 network engineers.",
-    "history_2022": "Established Discord community, expanded member coverage, and began regular technical workshops.",
-    "history_2023": "Became an important network technology exchange platform in Taiwan and established partnerships with international network organizations.",
+    "history_2024": "Became an important network technology exchange platform in Taiwan and established partnerships with international network organizations.",
+    "history_2025": "Continued to promote network technology exchange and maintained partnerships with international network organizations.",
     "committed_to": "We are committed to",
     "commitment_1": "Promoting technical exchange and cooperation among network operators",
     "commitment_2": "Providing guidance and resources for network technology best practices",
     "commitment_3": "Building a community network of network professionals in Taiwan",
     "values_description": "These core values guide all our activities and decisions, enabling us to better serve the community.",
-    "team_description": "Meet the core team members driving RealTWNOG forward.",
     "year_to_present": "to present"
   },
   "Members": {
@@ -107,20 +103,13 @@
     "subject": "Subject",
     "message": "Message",
     "send": "Send Message",
-    "orContact": "Or Contact Us Via",
-    "discord": "Join Discord",
+    "ContactUs": "Contact Us Via",
     "email_address": "Email Us",
     "social": "Social Media",
     "faq": "Frequently Asked Questions",
-    "faq1_question": "How do I join RealTWNOG?",
-    "faq1_answer": "You can apply to join through our Discord server or by contacting us directly at our events.",
-    "faq2_question": "Are RealTWNOG events paid?",
-    "faq2_answer": "Most events are free, but special workshops or seminars may charge a reasonable fee, with discounts typically available for members.",
-    "faq3_question": "How can I become a speaker or share content?",
-    "faq3_answer": "Please contact us through this form or Discord with your proposed topic and content outline.",
-    "placeholder_name": "John Doe",
-    "placeholder_email": "example@mail.com",
-    "placeholder_subject": "Please enter a subject",
-    "placeholder_message": "Please enter your message here..."
+    "faq1_question": "Are RealTWNOG events paid?",
+    "faq1_answer": "Most events are free, but special workshops or seminars may charge a reasonable fee, with discounts typically available for members.",
+    "faq2_question": "How can I become a speaker or share content?",
+    "faq2_answer": "Please contact us through this form or Discord with your proposed topic and content outline."
   }
 }

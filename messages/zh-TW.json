@@ -22,14 +22,15 @@
     "submit": "提交",
     "cancel": "取消",
     "learnMore": "了解更多",
-    "readMore": "閱讀更多"
+    "readMore": "閱讀更多",
+    "contactUs": "聯絡我們"
   },
   "Menu": {
     "home": "首頁",
-    "about": "關於",
-    "members": "成員",
     "events": "活動",
-    "contact": "聯絡我們"
+    "about": "關於我們",
+    "contact": "聯絡我們",
+    "quickaction": "立即報名"
   },
   "Events": {
     "title": "活動",
@@ -40,14 +41,14 @@
     "eventLocation": "地點",
     "eventType": "活動類型",
     "noUpcomingEvents": "目前沒有近期活動",
+    "noPastEvents": "目前沒有過往活動",
     "registerNow": "立即報名",
     "moreDetails": "更多詳情",
     "workshop": "工作坊",
     "conference": "研討會",
     "meetup": "聚會",
     "online": "線上",
-    "hybrid": "混合",
-    "joinDiscord": "加入我們的 Discord 社群，獲取最新活動通知"
+    "hybrid": "混合"
   },
   "About": {
     "title": "關於我們",
@@ -63,18 +64,13 @@
     "value2_text": "我們重視技術的專業性，並以提供高質量的技術內容為己任。",
     "value3_title": "合作互助",
     "value3_text": "我們鼓勵成員間的合作互助，共同解決網路營運中的挑戰。",
-    "team": "核心團隊",
-    "joinUs": "加入我們",
-    "history_2020": "RealTWNOG 正式成立，由一群熱情的網路工程師發起，希望建立一個開放的技術交流平台。",
-    "history_2021": "舉辦首次大型線上研討會，吸引了超過 200 位網路工程師參與。",
-    "history_2022": "建立 Discord 社群，擴大成員覆蓋範圍，開始定期舉辦技術工作坊。",
-    "history_2023": "成為臺灣重要的網路技術交流平台，與國際網路組織建立合作關係。",
+    "history_2024": "成為臺灣重要的網路技術交流平台，與國際網路組織建立合作關係。",
+    "history_2025": "持續推動網路技術交流，並與國際網路組織保持合作關係。",
     "committed_to": "我們致力於",
     "commitment_1": "促進網路營運商之間的技術交流與合作",
     "commitment_2": "提供網路技術最佳實踐的指導與資源",
     "commitment_3": "建立臺灣網路專業人士的社群網絡",
     "values_description": "這些核心價值引導我們的所有活動和決策，讓我們能夠更好地服務社群。",
-    "team_description": "認識推動 RealTWNOG 的核心團隊成員。",
     "year_to_present": "至今"
   },
   "Members": {
@@ -107,20 +103,13 @@
     "subject": "主旨",
     "message": "訊息內容",
     "send": "發送訊息",
-    "orContact": "或透過以下方式聯絡",
-    "discord": "加入 Discord",
+    "ContactUs": "透過以下方式聯絡",
     "email_address": "寄信給我們",
     "social": "社群媒體",
     "faq": "常見問題",
-    "faq1_question": "如何加入 RealTWNOG？",
-    "faq1_answer": "您可以透過我們的 Discord 伺服器申請加入，或參加我們的活動直接與我們聯繫。",
-    "faq2_question": "RealTWNOG 的活動是否需要付費？",
-    "faq2_answer": "大多數活動是免費的，特殊工作坊或研討會可能會收取適當費用，但會員通常享有折扣。",
-    "faq3_question": "如何成為講者或分享內容？",
-    "faq3_answer": "請透過此聯絡表單或 Discord 與我們聯繫，提供您想分享的主題與內容大綱。",
-    "placeholder_name": "張小明",
-    "placeholder_email": "example@mail.com",
-    "placeholder_subject": "請輸入主旨",
-    "placeholder_message": "請輸入您的訊息內容..."
+    "faq1_question": "RealTWNOG 的活動是否需要付費？",
+    "faq1_answer": "大多數活動是免費的，特殊工作坊或研討會可能會收取適當費用，但會員通常享有折扣。",
+    "faq2_question": "如何成為講者或分享內容？",
+    "faq2_answer": "請透過此聯絡表單或 Discord 與我們聯繫，提供您想分享的主題與內容大綱。"
   }
 }

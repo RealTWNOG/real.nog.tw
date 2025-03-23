@@ -16,74 +16,17 @@ export default function EventsPage() {
   const upcomingEvents: Event[] = [
     {
       id: 1,
-      title: "TWNOG 14 研討會",
-      date: "2024-06-18",
+      title: "源來這才是真正的網路維運",
+      date: "2025-xx-xx",
       location: "台北市",
       type: "conference",
       description:
-        "一年一度的網路營運技術研討會，聚焦於 RPKI、路由安全與 IPv6 部署",
-    },
-    {
-      id: 2,
-      title: "網路安全工作坊",
-      date: "2024-07-22",
-      location: "線上",
-      type: "workshop",
-      description: "針對 DDoS 防禦與緩解策略的實務工作坊，包含實機演練",
-    },
-    {
-      id: 3,
-      title: "網路工程師聚會",
-      date: "2024-08-15",
-      location: "台中市",
-      type: "meetup",
-      description: "非正式聚會，討論日常營運挑戰與經驗分享",
+        "[籌辦中] 一年一度的網路營運技術研討會，聚焦於網路維運的基礎知識，包含各個面向如 BGP、DNS、DHCP、NTP 等，並邀請資深網路專家分享實務經驗。",
     },
   ];
 
   // 假設的過去活動 (placeholder)
-  const pastEvents: Event[] = [
-    {
-      id: 101,
-      title: "TWNOG 13 研討會",
-      date: "2023-06-20",
-      location: "台北市",
-      type: "conference",
-      description: "網路營運技術研討會，主題包含網路安全、自動化與雲端網路",
-    },
-    {
-      id: 102,
-      title: "BGP 路由安全工作坊",
-      date: "2023-09-15",
-      location: "線上",
-      type: "workshop",
-      description: "專注於 BGP 安全實踐、RPKI 部署與 ROA 配置的實務工作坊",
-    },
-    {
-      id: 103,
-      title: "網路監控工具介紹",
-      date: "2023-11-10",
-      location: "台北市",
-      type: "meetup",
-      description: "分享各種開源網路監控工具的使用經驗與設定方法",
-    },
-    {
-      id: 104,
-      title: "IPv6 部署經驗分享",
-      date: "2024-01-25",
-      location: "台中市",
-      type: "meetup",
-      description: "IPv6 部署實務分享，包含各種常見問題與解決方案",
-    },
-    {
-      id: 105,
-      title: "DNS 安全研討會",
-      date: "2024-03-18",
-      location: "線上",
-      type: "workshop",
-      description: "探討 DNS 安全威脅與防護策略，包含 DNSSEC 部署實務",
-    },
-  ];
+  const pastEvents: Event[] = [];
 
   return (
     <div className="w-full">
@@ -172,44 +115,9 @@ export default function EventsPage() {
                       ))}
                     </div>
                   ) : (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="rounded-lg border-2 border-black/80 bg-white p-8 text-center shadow-md dark:border-white/20 dark:bg-gray-900"
-                    >
-                      <div className="mb-4 inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
-                        通知！
-                      </div>
-                      <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
-                        {t("noUpcomingEvents")}
-                      </h3>
-                      <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        {t("joinDiscord")}
-                      </p>
-                      <Button
-                        asChild
-                        className="border-2 border-black/80 bg-cyan-500 font-medium text-white transition-all hover:bg-cyan-600 dark:border-white/20"
-                      >
-                        <Link
-                          href="https://discord.gg/realtw"
-                          target="_blank"
-                          className="flex items-center gap-2"
-                        >
-                          加入 Discord
-                          <motion.div
-                            animate={{ x: [0, 3, 0] }}
-                            transition={{
-                              repeat: Infinity,
-                              repeatDelay: 1.5,
-                              duration: 0.8,
-                            }}
-                          >
-                            <ArrowUpRight className="h-4 w-4 text-white" />
-                          </motion.div>
-                        </Link>
-                      </Button>
-                    </motion.div>
+                    <div className="text-center text-gray-600 dark:text-gray-400">
+                      {t("noUpcomingEvents")}
+                    </div>
                   )}
                 </TabsContent>
 
@@ -222,20 +130,26 @@ export default function EventsPage() {
                   >
                     {t("pastEvents")}
                   </motion.h2>
-                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {pastEvents.map((event, index) => (
-                      <motion.div
-                        key={event.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                        className="h-full"
-                      >
-                        <EventCard event={event} isPast variant="homepage" />
-                      </motion.div>
-                    ))}
-                  </div>
+                  {pastEvents.length > 0 ? (
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                      {pastEvents.map((event, index) => (
+                        <motion.div
+                          key={event.id}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                          className="h-full"
+                        >
+                          <EventCard event={event} isPast variant="homepage" />
+                        </motion.div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center text-gray-600 dark:text-gray-400">
+                      {t("noPastEvents")}
+                    </div>
+                  )}
                 </TabsContent>
               </Tabs>
             </div>

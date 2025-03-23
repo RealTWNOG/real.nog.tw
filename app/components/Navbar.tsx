@@ -24,7 +24,6 @@ export default function Navbar() {
     { href: "/", label: t("home") },
     { href: "/events", label: t("events") },
     { href: "/about", label: t("about") },
-    { href: "/members", label: t("members") },
     { href: "/contact", label: t("contact") },
   ];
 
@@ -115,11 +114,10 @@ export default function Navbar() {
               className="relative overflow-hidden border-cyan-500 bg-transparent font-medium text-cyan-600 transition-all hover:bg-cyan-50 hover:text-cyan-700 dark:border-cyan-700 dark:text-cyan-400 dark:hover:bg-cyan-950 dark:hover:text-cyan-300"
             >
               <Link
-                href="https://discord.gg/realtw"
-                target="_blank"
+                href="/events"
                 className="flex items-center gap-1.5"
               >
-                Discord
+                {t("quickaction")}
                 <motion.div
                   animate={{ x: [0, 2, 0] }}
                   transition={{
@@ -209,11 +207,10 @@ export default function Navbar() {
                     className="w-full bg-cyan-600 font-medium text-white hover:bg-cyan-700 dark:bg-cyan-700 dark:hover:bg-cyan-600"
                   >
                     <Link
-                      href="https://discord.gg/realtw"
-                      target="_blank"
+                      href="/events"
                       className="flex items-center justify-center gap-1.5"
                     >
-                      Discord
+                      {t("quickaction")}
                       <ArrowUpRight className="h-4 w-4" />
                     </Link>
                   </Button>
