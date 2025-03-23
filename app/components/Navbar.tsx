@@ -114,7 +114,9 @@ export default function Navbar() {
               className="relative overflow-hidden border-cyan-500 bg-transparent font-medium text-cyan-600 transition-all hover:bg-cyan-50 hover:text-cyan-700 dark:border-cyan-700 dark:text-cyan-400 dark:hover:bg-cyan-950 dark:hover:text-cyan-300"
             >
               <Link
-                href="/events"
+                href="https://t.me/twnog"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1.5"
               >
                 {t("quickaction")}
@@ -207,7 +209,9 @@ export default function Navbar() {
                     className="w-full bg-cyan-600 font-medium text-white hover:bg-cyan-700 dark:bg-cyan-700 dark:hover:bg-cyan-600"
                   >
                     <Link
-                      href="/events"
+                      href="https://t.me/realtwnog"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-1.5"
                     >
                       {t("quickaction")}
