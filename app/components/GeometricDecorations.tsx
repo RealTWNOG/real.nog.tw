@@ -44,7 +44,7 @@ export function GeometricDecorations() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed z-10 h-full w-full overflow-hidden">
+    <div className="pointer-events-none absolute z-10 h-full w-full overflow-hidden">
       <motion.div
         className="absolute top-[10%] left-[5%] h-12 w-12 rounded-full bg-yellow-300 opacity-80"
         initial={{ scale: 0 }}

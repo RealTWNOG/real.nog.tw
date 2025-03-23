@@ -11,10 +11,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <GeometricDecorations />
-
       {/* 英雄區塊 */}
       <section className="relative w-full overflow-hidden bg-white py-24 md:py-32 lg:py-40 dark:border-gray-800 dark:bg-gray-950">
+        <GeometricDecorations />
+
         <div className="relative z-10 container px-4 md:px-6">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
             {/* 左側文字內容 */}
