@@ -11,7 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ArrowUpRight, AtSign } from "lucide-react";
+import { ArrowUpRight, AtSign, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -67,6 +67,32 @@ export default function ContactPage() {
                             </p>
                             <p className="text-sm text-gray-500 dark:text-gray-400">
                               contact@nog.tw
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowUpRight className="h-5 w-5 text-gray-400" />
+                      </CardContent>
+                    </Link>
+                  </Card>
+
+                  <Card className="border-2 border-gray-200 transition-all hover:border-cyan-200 hover:bg-cyan-50 dark:border-gray-700 dark:hover:border-cyan-800">
+                    <Link
+                      href="https://t.me/realtwnog"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <CardContent className="flex w-full items-center justify-between gap-2 p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
+                            <MessageCircle className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <p className="font-medium text-gray-900 dark:text-white">
+                              {t("telegram_group")}
+                            </p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">
+                              @realtwnog
                             </p>
                           </div>
                         </div>
