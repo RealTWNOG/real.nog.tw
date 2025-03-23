@@ -3,10 +3,8 @@
 import { useTranslation } from "../hooks/useTranslation";
 import { motion } from "motion/react";
 import { PageHero } from "@/app/components/PageHero";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Users, Heart, Share2, Code } from "lucide-react";
-import Link from "next/link";
+import { Users, Heart, Share2, Code } from "lucide-react";
 
 export default function AboutPage() {
   const { t } = useTranslation("About");
