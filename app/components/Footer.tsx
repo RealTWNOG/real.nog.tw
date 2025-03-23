@@ -102,7 +102,7 @@ export function Footer() {
         {/* 版權資訊 */}
         <div className="mt-8 border-t border-gray-200 pt-8 dark:border-gray-800">
           <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} RealTWNOG. {t("footer_rights")}
+            {t("footer_rights", { year: new Date().getFullYear().toString() })}
           </p>
         </div>
       </div>
