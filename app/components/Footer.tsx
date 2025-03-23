@@ -70,6 +70,16 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
+                  href="https://t.me/realtwnog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 transition-colors hover:text-cyan-600 dark:text-gray-400 dark:hover:text-cyan-500"
+                >
+                  Telegram
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/RealTWNOG"
                   target="_blank"
                   rel="noopener noreferrer"
